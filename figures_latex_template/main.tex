@@ -1,0 +1,538 @@
+\documentclass[10pt]{article}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+% \geometry{a4paper}                   % ... or a4paper or a5paper or ... 
+\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+
+%%%%%%%%%%%%%%%%%%%%
+\newcommand{\hide}[1]{}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{textcomp}
+
+\hide{
+\usepackage{amscd}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{cases}		 
+\usepackage{cutwin}
+\usepackage{enumerate}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage{lipsum}
+\usepackage{mathrsfs}	
+\usepackage{multimedia}
+\usepackage{wrapfig}
+\usepackage{pdflscape}
+}
+
+\pagestyle{empty}
+
+\begin{document}
+
+
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210601.png}
+        % \caption{}
+    \end{subfigure}%
+        \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210602.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210603.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210604.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210605.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210606.png}
+        % \caption{}
+    \end{subfigure}
+    \\
+        \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210607.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210608.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210609.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210610.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210611.png}
+        % \caption{Temperature}
+    \end{subfigure}%
+        \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210612.png}
+        % \caption{Specific humidity}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210613.png}
+        % \caption{Precipitation}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210614.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210615.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210616.png}
+        % \caption{}
+    \end{subfigure}%
+        \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210617.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210618.png}
+        % \caption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210619.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210620.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210621.png}
+        % \caption{}
+    \end{subfigure}%
+        \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210622.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210623.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210624.png}
+        % \caption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210625.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210626.png}
+        % \caption{Temperature}
+    \end{subfigure}%
+        \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210627.png}
+        % \caption{Specific humidity}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210628.png}
+        % \caption{Precipitation}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210629.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210630.png}
+        % \caption{}
+    \end{subfigure}
+     \caption{Time series - JUNE 2021}
+\label{fig:bands}
+\end{figure}
+
+
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210701.png}
+        % \caption{}
+    \end{subfigure}%
+        \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210702.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210703.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210704.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210705.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210706.png}
+        % \caption{}
+    \end{subfigure}
+    \\
+        \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210707.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210708.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210709.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210710.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210711.png}
+        % \caption{Temperature}
+    \end{subfigure}%
+        \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210712.png}
+        % \caption{Specific humidity}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210713.png}
+        % \caption{Precipitation}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210714.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210715.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210716.png}
+        % \caption{}
+    \end{subfigure}%
+        \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210717.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210718.png}
+        % \caption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210719.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210720.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210721.png}
+        % \caption{}
+    \end{subfigure}%
+        \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210722.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210723.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210724.png}
+        % \caption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210725.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210726.png}
+        % \caption{Temperature}
+    \end{subfigure}%
+        \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210727.png}
+        % \caption{Specific humidity}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210728.png}
+        % \caption{Precipitation}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210729.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210730.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210731.png}
+        % \caption{}
+    \end{subfigure}
+     \caption{Time series - JULY 2021}
+\label{fig:bands}
+\end{figure}
+
+
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210801.png}
+        % \caption{}
+    \end{subfigure}%
+        \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210802.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210803.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210804.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210805.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210806.png}
+        % \caption{}
+    \end{subfigure}
+    \\
+        \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210807.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210808.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210809.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210810.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210811.png}
+        % \caption{Temperature}
+    \end{subfigure}%
+        \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210812.png}
+        % \caption{Specific humidity}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210813.png}
+        % \caption{Precipitation}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210814.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210815.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210816.png}
+        % \caption{}
+    \end{subfigure}%
+        \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210817.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210818.png}
+        % \caption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210819.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210820.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210821.png}
+        % \caption{}
+    \end{subfigure}%
+        \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210822.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210823.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210824.png}
+        % \caption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210825.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210826.png}
+        % \caption{Temperature}
+    \end{subfigure}%
+        \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210827.png}
+        % \caption{Specific humidity}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210828.png}
+        % \caption{Precipitation}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210829.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210830.png}
+        % \caption{}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.166\linewidth}
+        \centering
+        \includegraphics[width=\textwidth]{time_series_20210831.png}
+        % \caption{}
+    \end{subfigure}
+     \caption{Time series - AUGUST 2021}
+\label{fig:bands}
+\end{figure}
+
+
+\end{document}
